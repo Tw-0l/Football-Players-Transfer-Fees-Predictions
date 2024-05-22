@@ -1,16 +1,17 @@
 # Use case 7 (Lab)
 
+### model :
+**Logistic Regression**
 ### Feature Engineering: 
 using **one hot coding** on categorical_features
 ### Hyperparameter Optimization:
-using **model.intercept_** = 3612928.704277743
+using **model.intercept_** = [ 0.53216762 -0.36229236 -0.16987526]
 
 ### Performance Metric Visuals:
-**Predictions vs. Real Values**
-![alt text](image.png)
+**Confusion Matrix**
+![alt text](image-2.png)
 
-**Residual Histogram**
-![alt text](image-1.png)
+
 
 
 ### Feature and Prediction Insights:
@@ -40,8 +41,8 @@ using **model.intercept_** = 3612928.704277743
 **Prediction Interpretation:** i took any value > 0.10 
 
 ### Limitations: 
-after removing the outliers half of the data was deleted 
+after removing the outliers 500 rowas was deleted 
 
-data shape befor cleaning: **(10754, 20)**
+data shape befor cleaning: **(10754, 19)**
 
-data shape after cleaning: **(4309, 20)**
+data shape after cleaning: **(10247, 19)**
