@@ -1,44 +1,32 @@
 # Use case 7 (Lab)
 
 ### model :
-**Logistic Regression**
+**Decision Tree Classifier**
+**Random Forest Classifier**
 ### Feature Engineering: 
 using **one hot coding** on categorical_features
 ### Hyperparameter Optimization:
-using **model.intercept_** = [ 0.53216762 -0.36229236 -0.16987526]
+using **grid search** ={'max_depth': 2, 'n_estimators': 75}
 
 ### Performance Metric Visuals:
 **Confusion Matrix**
-![alt text](image-2.png)
+![alt text](image-3.png)
 
 
 
 
 ### Feature and Prediction Insights:
-**Feature Importance:**
+**Classification Report**
 
-| Metric                | Value      |
-|-----------------------|------------|
-| current_value         | 1.000000   |
-| highest_value         | 0.834553   |
-| minutes played        | 0.420542   |
-| appearance            | 0.419656   |
-| award                 | 0.300454   |
-| assists               | 0.137415   |
-| games_injured         | 0.135654   |
-| goals                 | 0.121574   |
-| days_injured          | 0.107686   |
-| position_encoded      | 0.085154   |
-| height                | 0.040535   |
-| winger                | 0.005034   |
-| red cards             | -0.010171  |
-| clean sheets          | -0.011684  |
-| yellow cards          | -0.011766  |
-| second yellow cards   | -0.013889  |
-| age                   | -0.050156  |
-| goals conceded        | -0.063529  |
+|           | precision | recall | f1-score | support |
+|-----------|-----------|--------|----------|---------|
+|         0 |      0.53 |   0.69 |     0.60 |      29 |
+|         1 |      0.78 |   0.32 |     0.45 |      22 |
+|         2 |      0.65 |   0.77 |     0.71 |      22 |
+| accuracy  |           |        |     0.60 |      73 |
+| macro avg |      0.65 |   0.59 |     0.59 |      73 |
+| weighted avg |  0.64 |   0.60 |     0.59 |      73 |
 
-**Prediction Interpretation:** i took any value > 0.10 
 
 ### Limitations: 
 after removing the outliers 500 rowas was deleted 
@@ -46,3 +34,6 @@ after removing the outliers 500 rowas was deleted
 data shape befor cleaning: **(10754, 19)**
 
 data shape after cleaning: **(10247, 19)**
+
+### Feature importance from Random Forest:
+![alt text](image-4.png)
